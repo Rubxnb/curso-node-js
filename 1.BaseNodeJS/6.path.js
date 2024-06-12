@@ -17,4 +17,3 @@ console.log(filename)
 // obtener la extensión
 const extension = path.extname('image.jpg')
 console.log(extension)
-

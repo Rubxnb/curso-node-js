@@ -15,19 +15,19 @@ const text2 = fs.readFileSync('./archivo2.txt', 'utf-8')
 console.log(text2) */
 
 //! Esta es la forma asíncrona de leer archivos
-//? al ser asíncrono, necesita algo para asegurarnos de que una vez lee el archivo, va a ejecutar el código
-//? para ello se usan los callbacks, que son funciones que se ejecutan cuando la tarea ha terminado
-//? esto tb nos informa si ha habido un error
+// ? al ser asíncrono, necesita algo para asegurarnos de que una vez lee el archivo, va a ejecutar el código
+// ? para ello se usan los callbacks, que son funciones que se ejecutan cuando la tarea ha terminado
+// ? esto tb nos informa si ha habido un error
 
 console.log('Leyendo el primer archivo ...')
-fs.readFile('./archivo.txt', 'utf-8', (err, text) => { //? <--- este es el callback
+fs.readFile('./archivo.txt', 'utf-8', (_err, text) => { // ? <--- este es el callback
   console.log(text)
 })
 
 console.log('========= Hacer cosas mientras lee el archivo =========')
 
 console.log('Leyendo el segundo archivo ...')
-fs.readFile('./archivo2.txt', 'utf-8', (err, text) => {
+fs.readFile('./archivo2.txt', 'utf-8', (_err, text) => {
   console.log(text)
 })
 
@@ -44,7 +44,7 @@ readFilePromise('./archivo.txt', 'utf-8')
   .then(text => {
     console.log(text)
   })
-  
+
 console.log('========= Hacer cosas mientras lee el archivo =========')
 
 console.log('Leyendo el segundo archivo ...')

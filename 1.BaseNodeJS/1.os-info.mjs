@@ -1,4 +1,4 @@
-//os nos da info de nuestro Sistema Operativo
+// os nos da info de nuestro Sistema Operativo
 import { platform, release, arch, cpus, freemem, totalmem, uptime } from 'node:os'
 
 console.log('Información del sistema operativo:')
@@ -11,4 +11,3 @@ console.log('CPUs:', cpus())
 console.log('Memoria libre:', freemem() / 1024 / 1024)
 console.log('Memoria total:', totalmem() / 1024 / 1024)
 console.log('Tiempo encendido:', uptime() / 60 / 60 / 24)
-
